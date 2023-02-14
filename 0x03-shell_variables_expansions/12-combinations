@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -oP '(?!o.)[a-zA-Z]{2}' <<< $(echo {a..z}{a..z}{A..Z}{A..Z})
+printf "%s\n" {a..z}{a..n}{p..z}{A..Z}{A..N}{P..Z} | grep -v 'oo'
