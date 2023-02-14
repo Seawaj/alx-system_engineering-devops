@@ -1,2 +1,2 @@
 #!/bin/bash
-for i in {a..z} {A..Z};do [ $i != o ] && for j in {a..z} {A..Z};do [ $j != o ] && [ $i != $j ] && echo $i$j;done;done
+grep -oP '(?!o.)[a-zA-Z]{2}' <<< $(echo {a..z}{a..z}{A..Z}{A..Z})
